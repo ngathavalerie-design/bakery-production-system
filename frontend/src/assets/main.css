@@ -1,4 +1,8 @@
-@import './base.css';
+@import "tailwindcss";
+
+/* Explicitly tell Tailwind v4 to scan all your Vue components for classes */
+@source "../**/*.{vue,js,ts,jsx,tsx}";
+@source "../../index.html";
 
 #app {
   max-width: 1280px;

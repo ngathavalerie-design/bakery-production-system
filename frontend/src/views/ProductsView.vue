@@ -76,7 +76,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import ProductCard from '../ProductCard.vue'
+import ProductCard from '../components/ProductCard.vue'
 
 const searchQuery = ref('')
 const showInactive = ref(false)
@@ -94,7 +94,7 @@ const products = ref([
   { id: 8, name: 'Cinnamon Roll', price: 40, category: 'pastry', shelf_life_hours: 12, is_active: true },
   { id: 9, name: 'Meat Pie', price: 80, category: 'pastry', shelf_life_hours: 8, is_active: true },
   { id: 11, name: 'Ginger Cookies', price: 110, category: 'pastry', shelf_life_hours: 72, is_active: true },
-  { id: 12, name: 'Loaf', price: 45, category: 'bread', shelf_life_hours: 6, is_active: false } // <-- Changed here
+  { id: 12, name: 'Loaf', price: 45, category: 'bread', shelf_life_hours: 6, is_active: false }
 ])
 
 const saleTotal = computed(() => {

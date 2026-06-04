@@ -1,39 +1,126 @@
-@import "tailwindcss";
+/* ==========================================================================
+   THE ULTRA-CLASSY BAKERY WORKSPACE ENGINE (TAILWIND BYPASS)
+   Forces clean grid separation, elegant colors, and zero crowding.
+   ========================================================================== */
 
-/* Explicitly tell Tailwind v4 to scan all your Vue components for classes */
-@source "../**/*.{vue,js,ts,jsx,tsx}";
-@source "../../index.html";
+/* --- 1. Clean Canvas Setup --- */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  min-height: 100vh;
+  background-color: #f8fafc !important; /* Elegant premium soft gray */
+  color: #0f172a !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+}
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+/* --- 2. Elite Top Navigation Row (No Overlapping) --- */
+header, nav, .navbar {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  background-color: #ffffff !important; /* Crisp white navbar */
+  padding: 1.25rem 4rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-bottom: 3rem !important;
+  border-bottom: 1px solid #e2e8f0 !important;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+/* Forces links to sit neatly side-by-side with breathing room */
+header div, nav div, .navbar div {
+  display: flex !important;
+  align-items: center !important;
+  gap: 2rem !important;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+header a, nav a, .navbar a {
+  color: #475569 !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  padding: 0.5rem 1rem !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+header a:hover, nav a:hover {
+  color: #4f46e5 !important; /* Elegant Indigo Hover */
+}
+
+/* --- 3. The Master Grid Fix (Forces side-by-side columns) --- */
+.grid, 
+[class*="grid-cols-"], 
+main > div:nth-child(3) {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important; /* Forces cards side-by-side! */
+  gap: 2rem !important; /* Generous breathing room */
+  width: 92% !important;
+  margin: 0 auto 3rem auto !important;
+  box-sizing: border-box !important;
+}
+
+/* --- 4. Classy Minimalist Dashboard Cards --- */
+.bg-neutral-900, .bg-neutral-950, .bg-white, [class*="bg-neutral"] {
+  background-color: #ffffff !important; /* Pristine white cards */
+  border: 1px solid #e2e8f0 !important; /* Super clean, thin borders */
+  border-radius: 1rem !important; /* Modern rounded look */
+  padding: 2rem !important; /* Deep luxury inner spacing */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+}
+
+/* --- 5. Clean, Professional Typography & Colors --- */
+h1, .text-3xl {
+  font-size: 2.25rem !important;
+  color: #0f172a !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  width: 92% !important;
+  margin: 0 auto 0.5rem auto !important;
+}
+
+p, .text-neutral-400 {
+  color: #64748b !important;
+  font-size: 1rem !important;
+  width: 92% !important;
+  margin: 0 auto 2.5rem auto !important;
+}
+
+/* Card Section Small Labels */
+.bg-neutral-900 > div:first-child,
+.text-neutral-400, .text-neutral-500 {
+  color: #64748b !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Big Vibrant Metric Numbers */
+.text-emerald-400, [class*="text-emerald"] { 
+  color: #10b981 !important; /* Vibrant Business Green */
+  font-size: 2rem !important; 
+  font-weight: 700 !important; 
+}
+.text-indigo-400, [class*="text-indigo"] { 
+  color: #4f46e5 !important; /* Deep Royal Indigo */
+  font-size: 2rem !important; 
+  font-weight: 700 !important; 
+}
+.text-amber-500 { 
+  color: #f59e0b !important; /* Sharp Amber Warning */
+  font-size: 2rem !important; 
+  font-weight: 700 !important; 
 }
